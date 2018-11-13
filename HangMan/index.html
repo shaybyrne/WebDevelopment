@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Hangman</title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script src="js/script.js"></script>
+</head>
+
+<!-- execute the reset function when the page is loaded -->
+<body onLoad="reset()">
+	<h2>Simple Hangman</h2>
+	
+	<!-- note the name of the image - hm - this is used directly in the javascript -->
+	<p>	<img src="images/hmstart.gif" height="125" width="75" name="hm"> </p>
+
+	<form name="game">
+		<!--	input fields are disabled i.e. data cannot be entered
+				note the names of the 2 input fields - formDisplayWord and formUsedLetters
+				these are used directly in the javascript 	-->
+		<p class="p_style">
+			Display Word: <input type="text" class="input_style" name="formDisplayWord" disabled />
+			<br />	<br />
+			Used Letters: <input type="text" class="input_style" name="formUsedLetters" disabled />
+		</p>
+	</form>
+
+	<p class="p_style"> Choose a letter:
+		<br />	<br />
+		<!-- buttons laid out like a keyboard 
+			 when each button is clicked, the javascript function selectLetter is executed
+			 the parameter (letter) that is passed to the function depends on the button that is clicked
+			 e.g. when the first button is clicked the letter Q is passed to the javascript function selectLetter -->
+		<a href="javascript:selectLetter('Q');"><input type="button" class="button_style" value="Q"></a>
+		<a href="javascript:selectLetter('W');"><input type="button" class="button_style" value="W"></a>
+		<a href="javascript:selectLetter('E');"><input type="button" class="button_style" value="E"></a>
+		<a href="javascript:selectLetter('R');"><input type="button" class="button_style" value="R"></a>
+		<a href="javascript:selectLetter('T');"><input type="button" class="button_style" value="T"></a>
+		<a href="javascript:selectLetter('Y');"><input type="button" class="button_style" value="Y"></a>
+		<a href="javascript:selectLetter('U');"><input type="button" class="button_style" value="U"></a>
+		<a href="javascript:selectLetter('I');"><input type="button" class="button_style" value="I"></a>
+		<a href="javascript:selectLetter('O');"><input type="button" class="button_style" value="O"></a>
+		<a href="javascript:selectLetter('P');"><input type="button" class="button_style" value="P"></a>
+		<br />	<br />
+
+		<a href="javascript:selectLetter('A');"><input type="button" class="button_style" value="A"></a>
+		<a href="javascript:selectLetter('S');"><input type="button" class="button_style" value="S"></a>
+		<a href="javascript:selectLetter('D');"><input type="button" class="button_style" value="D"></a>
+		<a href="javascript:selectLetter('F');"><input type="button" class="button_style" value="F"></a>
+		<a href="javascript:selectLetter('G');"><input type="button" class="button_style" value="G"></a>
+		<a href="javascript:selectLetter('H');"><input type="button" class="button_style" value="H"></a>
+		<a href="javascript:selectLetter('J');"><input type="button" class="button_style" value="J"></a>
+		<a href="javascript:selectLetter('K');"><input type="button" class="button_style" value="K"></a>
+		<a href="javascript:selectLetter('L');"><input type="button" class="button_style" value="L"></a>
+		<br />	<br />
+
+		<a href="javascript:selectLetter('Z');"><input type="button" class="button_style" value="Z"></a>
+		<a href="javascript:selectLetter('X');"><input type="button" class="button_style" value="X"></a>
+		<a href="javascript:selectLetter('C');"><input type="button" class="button_style" value="C"></a>
+		<a href="javascript:selectLetter('V');"><input type="button" class="button_style" value="V"></a>
+		<a href="javascript:selectLetter('B');"><input type="button" class="button_style" value="B"></a>
+		<a href="javascript:selectLetter('N');"><input type="button" class="button_style" value="N"></a>
+		<a href="javascript:selectLetter('M');"><input type="button" class="button_style" value="M"></a>
+	</p>
+	<br />
+
+	<p>	<a href="javascript:reset()"><input type="button" class="button_style" value="Start game / Reset game"></a> </p>
+</body>
+</html>

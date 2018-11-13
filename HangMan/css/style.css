@@ -1,0 +1,23 @@
+body {
+	text-align:center;
+}
+
+.button_style {
+	cursor:pointer; 
+	margin-left:10px; 
+	font-size:18px;
+}
+
+.p_style {
+	font-weight:bold; 
+	font-size:18px;
+}
+
+.input_style {
+	cursor:no-drop; 
+	width:200px; 
+	font-size:18px;
+}
+
+/* 	visit the link below to see  
+	https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor */
